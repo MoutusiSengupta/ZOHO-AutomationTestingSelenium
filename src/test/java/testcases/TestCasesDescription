@@ -1,0 +1,39 @@
+TC_1:verify Homepage loads successfully
+steps
+1.navigate to https://www.zoho.com
+2.wait for the page to fully load
+3.verify the page title displays zoho
+4.verify main navigation menu is visible
+5.verify footer is visible and complete
+*Expected Result* Homepage loads without errors , all UI elements visible and properly positioned
+
+TC_2: verify navigation menu functionality
+1.on homepage , click on "products" menu
+2.verify product page loads with list of zoho products
+3.click on "resources"
+4.verify resources page loads
+5.click on "partners"
+6.verify partners page loads
+*Expected Result* All menu items are clickable and navigate to correct pages
+
+TC_3: Search Functionality on Homepage
+1.on homepage,locate search box
+2.enter search query "CRM"
+3.press enter or click search button
+4.verify search results page loads
+5.verify results contain CRM-related products/content
+6.click on one of the results
+7.verify correct page opens
+*Expected Result* All products are displayed with complete information and details page opens
+
+TC_4: Sign Up process-New User
+1.click on "sign up" button on homepage
+2.verify sign up page loads
+3.enter valid email address
+4.enter valid password
+5.enter full name
+6.select country from dropdown
+7.Accept terms and conditions checkbox
+8.click "create account" button
+9.verify account creation success message
+
