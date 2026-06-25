@@ -2,6 +2,6 @@ package testcases;
 
 import base.BaseTest;
 
-public class productNavigation extends BaseTest {
+public class productNavigation  {
 
 }

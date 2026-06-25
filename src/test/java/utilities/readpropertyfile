@@ -1,20 +1,17 @@
-package testcases;
-import base.BaseTest;
-import org.openqa.selenium.By;
-import org.testng.annotations.Test;
-import utilities.readxlsdata;
+package utilities;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
 
-public class login extends BaseTest {
-    @Test(dataProviderClass = readxlsdata.class,dataProvider = "testdata")
-    public static void logintest(String username,String password) throws InterruptedException {
-
-        driver.findElement(By.linkText(loc.getProperty("sign_in_button"))).click();
-         Thread.sleep(4000);
-        driver.findElement(By.xpath(loc.getProperty("email_field"))).sendKeys(username);
-        driver.findElement(By.xpath(loc.getProperty("next_button"))).click();
-        driver.findElement(By.id(loc.getProperty("password_field"))).sendKeys(password);
-        driver.findElement(By.xpath(loc.getProperty("login_button"))).click();
+    public class readpropertyfile {
+        public static void main (String[]args) throws IOException {
+            FileReader fr = new FileReader("C:\\Users\\Anjan\\IdeaProjects\\ZOHO-AutomationTestingSelenium\\src\\test\\resources\\configfiles\\config.properties");
+            Properties p = new Properties();
+            p.load(fr);
+            System.out.println(p.getProperty("browser"));
+            System.out.println(p.getProperty("url"));
+        }
     }
 
-}
